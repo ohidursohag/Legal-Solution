@@ -5,6 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+   <!-- fontWesome -->
+   <script src="https://kit.fontawesome.com/4357c0aaac.js" crossorigin="anonymous"></script>
    <!-- Google Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +22,7 @@
    <style>
       * {
          box-sizing: border-box;
+         
       }
 
       .title-text {
@@ -82,7 +85,88 @@
 
 <body>
    <!-- Header Section Start Here -->
-   <header></header>
+   <header>
+      <!-- Nav Menu -->
+      <nav class="container py-5 px-1 mx-auto flex justify-between sm:justify-normal items-center">
+         <!-- logo -->
+         <div >
+            <img class="w-[90%] lg:w-[100%]" src="./images/logo2.png" alt="">
+         </div>
+         <!-- Nav links large device -->
+         <div class="flex-auto hidden sm:block ">
+            <ul class="list-none flex sm:justify-between md:justify-center md:gap-4 lg:gap-10 gap-[10px] lg px-4 text-sm md:text-base">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Service <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><a href="#">Cases <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><a href="#">Blog <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><a href="#">Contact Us <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+            </ul>
+         </div>
+         <!-- button -->
+         <div class="hidden  sm:block">
+            <input
+               class="px-3 py-3 md:px-5 md:py-5 text-sm md:text-xl  text-white outline-none cursor-pointer  bg-button-bg rounded-xl"
+               type="submit" value="Free Consultation">
+         </div>
+         <!-- Ham-Barger Menu -->
+         <div class="dropdown sm:hidden mr-2 flex items-center">
+            <label class=" swap swap-rotate z-10">
+               <!-- this hidden checkbox controls the state -->
+               <input type="checkbox" />
+
+               <!-- hamburger icon -->
+               <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 512 512">
+                  <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+               </svg>
+
+               <!-- close icon -->
+               <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                  viewBox="0 0 512 512">
+                  <polygon
+                     points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+               </svg>
+
+            </label>
+            <ul
+               class="menu menu-sm dropdown-content pt-12 -top-4 -right-2 text-right mt-3  z-[1] p-2 shadow bg-base-100 rounded-box w-40 ">
+               <li><a href="#">Home </a></li>
+               <li><a href="#">Service <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><a href="#">Cases <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><a href="#">Blog <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><a href="#">Contact Us <span><i class="fa-solid fa-chevron-right"></i></span></a></li>
+               <li><input
+                  class="px-3 py-3 md:px-5 md:py-5 md:text-xl md:font-semibold text-white outline-none cursor-pointer  bg-button-bg rounded-xl"
+                  type="submit" value="Free Consultation"></li>
+            </ul>
+         </div>
+      </div>
+      </nav>
+      <!-- Hero Banner -->
+      <section class="container  mx-auto">
+         <div class="min-h-[calc(100vh-81px)] sm:min-h-[calc(100vh-84px)] md:min-h-[calc(100vh-108px)] hero" style="background-image: url('./images/banner.png');">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="text-center text-white">
+               <div class="max-w-[350px] sm:max-w-[500px] lg:max-w-[750px]">
+                  <h1 class="mb-5 text-4xl lg:text-5xl xl:text-7xl font-bold xl:leading-[80px]">We Provide Effective
+                     <br> Legal Solutions</h1>
+                  <p class="mb-5 text-white description-text">There are many variations of passages of Lorem Ipsum
+                     available, but the majority have
+                     suffered alteration in some form, by injected humour.</p>
+
+                  <div class="flex items-center gap-3 md:gap-5">
+                     <input
+                        class="flex-1 py-3 pl-4 md:py-5 md:pl-6 outline-none bg-form-bg rounded-xl placeholder:md:font-medium placeholder:opacity-60 md:description-text"
+                        placeholder="Your Email" type="email" name="" id="">
+                     <input
+                        class="px-3 py-3 md:px-5 md:py-5 md:text-xl md:font-semibold text-white outline-none cursor-pointer  bg-button-bg rounded-xl"
+                        type="submit" value="Search">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </header>
    <!-- Header Section End Here -->
    <!-- Main Section Start Here -->
    <main>
@@ -445,7 +529,8 @@
 
                </div>
                <div class="relative flex flex-col">
-                  <input type="email" name="email" id="" class="py-6 pl-8 outline-none rounded-xl text-description-text" placeholder="Email Address">
+                  <input type="email" name="email" id="" class="py-6 pl-8 outline-none rounded-xl text-description-text"
+                     placeholder="Email Address">
                   <div class="absolute top-0 right-0 ">
                      <a href="#"
                         class=" flex justify-center items-center w-[72px] h-[72px]  bg-button-bg border-none rounded-xl ">
